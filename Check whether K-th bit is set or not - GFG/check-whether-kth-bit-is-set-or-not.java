@@ -11,13 +11,14 @@ import java.util.*;
 
 class CheckBit
 {
-    // Function to check if Kth bit is set or not.
     static boolean checkKthBit(int n, int k)
     {
-        // Your code here
-        return ((n&(1<<k))==0)?false:true;
-    }
-    
+        int mask = 1;
+        mask <<=k;
+        int ans = n & mask;
+        if(ans==0)return false;
+        return true;
+    }    
 }
 
 //{ Driver Code Starts.
